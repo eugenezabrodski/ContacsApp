@@ -40,30 +40,21 @@ class InfoTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        1
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! CustomHeaderView
-        header.textLabel?.text = ContactSource.contact[section].name
+        header.textLabel?.text = "\(ContactSource.contact[section].name ?? "") \(ContactSource.contact[section].surname ?? "")"
         
         return header
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContacsCell", for: indexPath)
-            //let cell = UITableViewCell()
-        let phone = ContactSource.contact[indexPath.row].phone
-        let email = ContactSource.contact[indexPath.row].email
-        cell.textLabel?.text = indexPath.row == 0 ? phone : email
         
-
-        //cell.textLabel?.text = indexPath.row == 0 ? ContactSource.contact[indexPath.row].email : ContactSource.contact[indexPath.row].phone
-        
-        //cell.textLabel?.text == 0 ? email : phone
-        
-        //let user = ContactSource.contact.randomElement()
-        //cell.textLabel?.text = "\(user?.phone ?? "")\(user?.email ?? "")"
+        let user = ContactSource.contact.randomElement()
+        cell.textLabel?.text = "\(user?.phone ?? "")\(user?.email ?? "")"
         
         
       /*  var configuration = cell.defaultContentConfiguration()
