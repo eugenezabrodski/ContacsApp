@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-486" y="-172"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="zcP-TS-8o2">
             <objects>
                 <tableViewController id="19R-Qx-Xvv" customClass="InfoTableViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                             <outlet property="delegate" destination="19R-Qx-Xvv" id="8bZ-9n-6hP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="XW6-UQ-U7L"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="person.fill" catalog="system" id="XW6-UQ-U7L"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi1-vE-lqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,11 +128,11 @@
             </objects>
             <point key="canvasLocation" x="2181.1594202898555" y="-377.00892857142856"/>
         </scene>
-        <!--Item-->
+        <!--Contacts-->
         <scene sceneID="uzh-9N-GGb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tcd-Ld-ess" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sdm-YN-mnr"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="book.closed.fill" catalog="system" id="Sdm-YN-mnr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NHU-Ml-g9F">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -149,6 +149,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.closed.fill" catalog="system" width="115" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

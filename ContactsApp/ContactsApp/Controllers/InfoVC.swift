@@ -9,6 +9,8 @@ import UIKit
 
 class InfoVC: UIViewController {
     
+    //MARK: - Properties
+    
     var user: User?
 
     @IBOutlet weak var infoView: UITableView!
@@ -17,6 +19,7 @@ class InfoVC: UIViewController {
         super.viewDidLoad()
         title = "\(user?.name ?? "nil") \(user?.surname ?? "nil")"
         infoView.dataSource = self
+        title = "Info"
     }
     
 }
